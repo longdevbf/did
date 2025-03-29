@@ -1,0 +1,35 @@
+{
+  "name": "did_test",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@meshsdk/core": "^1.9.0-beta.21",
+    "@meshsdk/core-csl": "^1.9.0-beta.21",
+    "@meshsdk/react": "^1.9.0-beta.21",
+    "@prisma/client": "^6.5.0",
+    "crypto-js": "^4.2.0",
+    "next": "15.2.4",
+    "pinata": "^2.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/crypto-js": "^4.2.2",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.4",
+    "prisma": "^6.5.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
