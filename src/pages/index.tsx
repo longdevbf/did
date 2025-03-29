@@ -108,7 +108,7 @@ const Home: NextPage = () => {
   const { connected, wallet } = useWallet();
 
   // State của ví và tài sản
-  const [assets, setAssets] = useState<null | any>(null);
+  const [assets, setAssets] = useState<unknown[] | null>(null);
   const [loadingAssets, setLoadingAssets] = useState<boolean>(false);
 
   // State cho xác thực danh tính

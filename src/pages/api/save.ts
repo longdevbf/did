@@ -9,7 +9,7 @@ export default async function handler(
 ) {
   // POST: Lưu NFT mới
   if (req.method === "POST") {
-    try {
+    
       const { title, randomCode, txHash } = req.body;
 
       const nft = await prisma.nFT.create({
@@ -21,14 +21,11 @@ export default async function handler(
       });
 
       res.status(200).json({ success: true, nft });
-    } catch (error: any) {
-      console.error("Lỗi lưu NFT:", error);
-      res.status(500).json({ success: false, error: error.message });
-    }
+    
   }
   // GET: Nếu có query title & randomCode thì trả về NFT tương ứng, nếu không có thì trả về toàn bộ NFT
   else if (req.method === "GET") {
-    try {
+    
       const { title, randomCode } = req.query;
 
       // Nếu không có query, trả về toàn bộ NFT
@@ -60,10 +57,6 @@ export default async function handler(
       }
 
       res.status(200).json({ success: true, nft });
-    } catch (error: any) {
-      console.error("Lỗi lấy NFT:", error);
-      res.status(500).json({ success: false, error: error.message });
-    }
   }
   // Các method khác không được phép
   else {
